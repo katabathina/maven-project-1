@@ -1,6 +1,20 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: /var/lib/jenkins/workspace/sample-maven/webapp/target/webapp.war
     destination: /opt/apache-tomcat-8.5.35/webapps
-
+permissions:
+   - object: /opt/apache-tomcat-8.5.35/webapps
+     pattern: "**"
+     mode: 775
+     owner: root	
+     group: root
+     type:
+       - directory
+   - object: /opt/apache-tomcat-8.5.35/webapps
+     pattern: "**"
+     mode: 775
+     owner: root	
+     group: root
+     type:
+       - file
