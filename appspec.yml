@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-  - source: /var/lib/jenkins/workspace/sample1/webapp/target
+  - source: /
     destination: /opt/apache-tomcat-8.5.35/webapps
